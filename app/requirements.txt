@@ -1,4 +1,0 @@
-fastapi
-uvicorn
-pydantic
-sqlite3  # (domyślnie wbudowane w Pythona, nie musisz instalować osobno)

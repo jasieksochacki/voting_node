@@ -1,0 +1,41 @@
+version: "3.9"
+services:
+  node1:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      NODE_ID: node-1
+      PEERS: node2:8000,node3:8000,node4:8000,node5:8000
+
+  node2:
+    build: .
+    ports:
+      - "8001:8000"
+    environment:
+      NODE_ID: node-2
+      PEERS: node1:8000,node3:8000,node4:8000,node5:8000
+
+  node3:
+    build: .
+    ports:
+      - "8002:8000"
+    environment:
+      NODE_ID: node-3
+      PEERS: node1:8000,node2:8000,node4:8000,node5:8000
+
+  node4:
+    build: .
+    ports:
+      - "8003:8000"
+    environment:
+      NODE_ID: node-4
+      PEERS: node1:8000,node2:8000,node3:8000,node5:8000
+
+  node5:
+    build: .
+    ports:
+      - "8004:8000"
+    environment:
+      NODE_ID: node-5
+      PEERS: node1:8000,node2:8000,node3:8000,node4:8000
