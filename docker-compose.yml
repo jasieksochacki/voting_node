@@ -1,0 +1,85 @@
+version: '3.8'
+
+services:
+  black_pearl:
+    build:
+      context: ./app/backend
+    container_name: black_pearl
+    environment:
+      - NODE_ID=black_pearl
+      - NODE_PORT=8000
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./app/backend/statuses.json:/app/statuses.json
+    networks:
+      - fleet
+
+  flying_dutchman:
+    build:
+      context: ./app/backend
+    container_name: flying_dutchman
+    environment:
+      - NODE_ID=flying_dutchman
+      - NODE_PORT=8000
+    ports:
+      - "8001:8000"
+    volumes:
+      - ./app/backend/statuses.json:/app/statuses.json
+    networks:
+      - fleet
+
+  queen_annes_revenge:
+    build:
+      context: ./app/backend
+    container_name: queen_annes_revenge
+    environment:
+      - NODE_ID=queen_annes_revenge
+      - NODE_PORT=8000
+    ports:
+      - "8002:8000"
+    volumes:
+      - ./app/backend/statuses.json:/app/statuses.json
+    networks:
+      - fleet
+
+  interceptor:
+    build:
+      context: ./app/backend
+    container_name: interceptor
+    environment:
+      - NODE_ID=interceptor
+      - NODE_PORT=8000
+    ports:
+      - "8003:8000"
+    volumes:
+      - ./app/backend/statuses.json:/app/statuses.json
+    networks:
+      - fleet
+
+  endeavour:
+    build:
+      context: ./app/backend
+    container_name: endeavour
+    environment:
+      - NODE_ID=endeavour
+      - NODE_PORT=8000
+    ports:
+      - "8004:8000"
+    volumes:
+      - ./app/backend/statuses.json:/app/statuses.json
+    networks:
+      - fleet
+
+  battle_controller:
+    build:
+      context: ./app/battle_controller
+    container_name: battle_controller
+    volumes:
+      - ./app/backend/statuses.json:/app/statuses.json
+    networks:
+      - fleet
+
+networks:
+  fleet:
+    driver: bridge

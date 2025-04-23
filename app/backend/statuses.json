@@ -1,0 +1,37 @@
+[
+  {
+    "id": "black_pearl",
+    "ip": "black_pearl",
+    "port": 8000,
+    "battle_points": 95,
+    "status": "alive"
+  },
+  {
+    "id": "flying_dutchman",
+    "ip": "flying_dutchman",
+    "port": 8000,
+    "battle_points": 87,
+    "status": "alive"
+  },
+  {
+    "id": "queen_annes_revenge",
+    "ip": "queen_annes_revenge",
+    "port": 8000,
+    "battle_points": 95,
+    "status": "alive"
+  },
+  {
+    "id": "interceptor",
+    "ip": "interceptor",
+    "port": 8000,
+    "battle_points": 80,
+    "status": "alive"
+  },
+  {
+    "id": "endeavour",
+    "ip": "endeavour",
+    "port": 8000,
+    "battle_points": 90,
+    "status": "alive"
+  }
+]
