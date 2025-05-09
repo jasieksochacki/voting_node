@@ -84,7 +84,7 @@ async def attack_loop():
 
         alive = await get_alive_nodes()
         if not alive:
-            print("[Battle Controller] All ships destroyed. Ending battle.")
+            print("[Battle  Controller] All ships destroyed. Ending battle.")
             return
 
         target, status = random.choice(alive)
